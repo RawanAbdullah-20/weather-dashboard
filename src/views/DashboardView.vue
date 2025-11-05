@@ -4,7 +4,7 @@ import DashboardHeader from '@/modules/dashboard/components/dashboard-header/das
 import { storeToRefs } from 'pinia';
 import { useDashboardStore } from '@/modules/dashboard/stores/dashboard.pinia';
 import { onMounted } from 'vue';
-import DashboardContent from '@/modules/dashboard/components/dashboard-content.vue';
+import DashboardContent from '@/modules/dashboard/components/dashboard-content/dashboard-content.vue';
 import BaseLoading from '@/modules/core/components/BaseLoading.vue';
 const { dashboardData, isLoadingDashboard } = storeToRefs(useDashboardStore());
 const { fetchWeatherData } = useDashboardStore();

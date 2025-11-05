@@ -5,17 +5,18 @@ import { computed, ref, type Ref } from 'vue';
 import { DashboardApis } from '../constants/dashboard.constant';
 import { router } from '@/plugins/router';
 import { useRoute } from 'vue-router';
+import type { IWeatherData } from '../models/dashboard.interface';
 
 
 export const useDashboardStore = defineStore('dashboard', () => {
     const isLoadingDashboard: Ref<boolean> = ref(false);
-    const dashboardData: Ref<any> = ref(null);
+    const dashboardData: Ref<IWeatherData | null> = ref(null);
     const route = useRoute();
 
     const fetchWeatherData = async ({ location='auto:ip' }: { location?: string }) => {
         isLoadingDashboard.value = true;
         try {
-            const { data } = await axiosInstance(DashboardApis.GetCurrentWeather,
+            const { data } = await axiosInstance<IWeatherData>(DashboardApis.GetCurrentWeather,
                 {
                     params: { q: location }
                 }
