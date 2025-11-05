@@ -5,7 +5,7 @@ import DashboardSearchInput from '@/modules/dashboard/components/dashboard-searc
 
 </script>
 <template>
-  <div>
+  <div class="flex flex-col md:flex-row items-center  gap-6 md:gap-8 lg:gap-16">
     <ThemeToggle />
     <DashboardSearchInput />
     <DashboardCurrentLocation />
