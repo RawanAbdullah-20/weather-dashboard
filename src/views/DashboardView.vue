@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import DashboardHeader from '@/modules/dashboard/components/dashboard-header.vue';
+import DashboardHeader from '@/modules/dashboard/components/dashboard-header/dashboard-header.vue';
 
 import { storeToRefs } from 'pinia';
 import { useDashboardStore } from '@/modules/dashboard/stores/dashboard.pinia';
