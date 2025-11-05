@@ -1,17 +1,16 @@
 <script setup lang="ts">
 </script>
 <template>
-  <div class="primary-card">
+  <div class="primary-card shadow">
     <slot />
-
   </div>
 </template>
 
 <style scoped>
 .primary-card {
   padding: 1.5rem;
-  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.5);
-  background-color: #D9D9D9;
+  background-color: var(--card-bg-color);
   border-radius: 30px;
+  color:var(--text-color)
 }
 </style>
