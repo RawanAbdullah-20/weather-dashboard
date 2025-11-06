@@ -62,3 +62,6 @@ A responsive weather dashboard built with Vue.js that displays current weather c
 - **Error Handling** - Graceful error handling with user-friendly messages
 - **Type Safety** - Full TypeScript integration with proper type definitions
 - **Loading States** - Smooth loading animations during data fetching
+
+### Screen Records
+- [Weather Dashboard Demo](src\assets\demo.mp4)
