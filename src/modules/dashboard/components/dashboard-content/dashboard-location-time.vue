@@ -32,11 +32,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <PrimaryCard class="min-h-[330px] flex flex-col justify-around items-center text-center">
-    <p class="text-4xl font-bold">{{ location?.name }}</p>
-    <div>
-      <p class="text-8xl font-bold">{{ formattedTime }}</p>
-      <p class="text-xl">{{ formattedDate }}</p>
+  <PrimaryCard class="h-full flex flex-col justify-around items-center text-center">
+    <p class="text-2xl md:text-4xl font-bold">{{ location?.name }}</p>
+    <div class="mt-10">
+      <p class="text-5xl md:text-8xl font-bold">{{ formattedTime }}</p>
+      <p class="md:text-xl">{{ formattedDate }}</p>
     </div>
   </PrimaryCard>
 </template>

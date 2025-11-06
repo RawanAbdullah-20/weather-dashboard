@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import { useDashboardStore } from '@/modules/dashboard/stores/dashboard.pinia';
-import { storeToRefs } from 'pinia';
-import { ref, type Ref } from 'vue';
 import { BsSearch } from '@kalimahapps/vue-icons';
 
 const { searchWeatherData } = useDashboardStore();
-const { searchQuery } = storeToRefs(useDashboardStore());
-const search: Ref<string> = ref(searchQuery.value);
+const search = defineModel<string>(); 
 
 const handleInputSearch = () => {
-  searchWeatherData({ search: search.value });
+  searchWeatherData({ search: search.value || '' });
 };
 </script>
 <template>
