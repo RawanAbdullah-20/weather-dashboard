@@ -12,9 +12,9 @@ const search: Ref<string> = ref(searchQuery.value);
   
 </script>
 <template>
-  <div class="flex flex-col md:flex-row items-center  gap-6 md:gap-8 lg:gap-16">
+  <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-6">
     <ThemeToggle />
-    <DashboardSearchInput v-model="search" />
+    <DashboardSearchInput v-model="search" class="lg:flex-1 " />
     <DashboardCurrentLocation @clearSearch="search=''" />
   </div>
 </template>

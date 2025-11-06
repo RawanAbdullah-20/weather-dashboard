@@ -8,7 +8,7 @@ const {  isDark } = storeToRefs(useThemeStore());
  const themeText=computed(()=>(isDark.value ? 'Dark Mode' : 'Light Mode'));
 </script>
 <template>
-  <div>
+  <div class="flex flex-row lg:flex-col justify-center items-center gap-2 mt-4">
     <button @click.prevent="toggleTheme()"
       class="bg-card border-1 border-dark relative w-20 h-10 rounded-full transition-colors duration-300 ease-in-out focus:outline-none focus:ring-none">
       <!-- Toggle Circle -->

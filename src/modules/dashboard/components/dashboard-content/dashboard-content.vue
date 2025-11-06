@@ -7,7 +7,7 @@ import DashboardCurrentWeather from './dashboard-current-weather.vue';
 
 </script>
 <template>
-    <div class="flex flex-col lg:flex-row gap-6 mb-6 ">
+    <div class="flex flex-col lg:flex-row gap-8 mb-8 ">
       <div class="lg:w-2/5">
        <DashboardLocationTime/>
       </div>
@@ -15,7 +15,7 @@ import DashboardCurrentWeather from './dashboard-current-weather.vue';
         <DashboardCurrentWeather/>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row gap-6 ">
+    <div class="flex flex-col lg:flex-row gap-8 ">
       <div class="lg:w-1/3">
         <DashboardDailyForecast/>
       </div>

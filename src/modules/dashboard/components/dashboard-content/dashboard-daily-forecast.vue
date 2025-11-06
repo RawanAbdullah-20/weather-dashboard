@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import PrimaryCard from '@/modules/core/components/primary-card.vue';
 import useTimeComposable from '@/modules/core/composables/useTime.composable';
-
 import { useDashboardStore } from '@/modules/dashboard/stores/dashboard.pinia';
 import { storeToRefs } from 'pinia';
 import useNumberComposable from '@/modules/core/composables/useNumber.composable';
+
 const { useDateTime } = useTimeComposable();
 const { formatNumber } = useNumberComposable();
 const { dashboardData } = storeToRefs(useDashboardStore());
@@ -13,8 +13,8 @@ const {forecast}=dashboardData.value ||{};
 </script>
 
 <template>
-  <PrimaryCard>
-    <h3 class="text-2xl font-bold mb-3 text-center">5 Days Forecast:</h3>
+  <PrimaryCard class="h-full">
+    <h3 class="text-2xl font-bold mb-4 text-center">5 Days Forecast:</h3>
       <div
         v-for="({day,date}) in forecast?.forecastday"
         :key="`forecast-${date}`"

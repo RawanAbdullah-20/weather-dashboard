@@ -18,7 +18,7 @@ const handleGetCurrentLocation = () => {
 
 <template>
   <button @click.prevent="handleGetCurrentLocation" :disabled="isLoadingDashboard"
-    class="bg-primary flex gap-2 items-center py-1 px-2 md:py-2 md:px-4 lg:py-3.5 lg:px-6 rounded-full shadow-lg/30 cursor-pointer w-full md:w-auto">
+    class="bg-primary flex gap-2 items-center  px-2  md:px-4 py-3.5 lg:px-6 rounded-full shadow-lg/30 cursor-pointer w-full md:w-auto">
     
     <BaseLoading v-if="isLoadingDashboard" />
     <template v-else>
