@@ -16,9 +16,11 @@ export const useDashboardStore = defineStore('dashboard', () => {
     const fetchWeatherData = async ({ location='auto:ip' }: { location?: string }) => {
         isLoadingDashboard.value = true;
         try {
-            const { data } = await axiosInstance<IWeatherData>(DashboardApis.GetCurrentWeather,
+            const { data } = await axiosInstance<IWeatherData>(DashboardApis.GetForecastWeather,
                 {
-                    params: { q: location }
+                    params: { q: location,
+                        days:5
+                     }
                 }
             );
             isLoadingDashboard.value = false;
@@ -55,7 +57,7 @@ export const useDashboardStore = defineStore('dashboard', () => {
         searchQuery,
         getCurrentWeatherData,
         searchWeatherData,
-        fetchWeatherData
+        fetchWeatherData,
     };
 
 });
