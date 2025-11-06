@@ -64,4 +64,4 @@ A responsive weather dashboard built with Vue.js that displays current weather c
 - **Loading States** - Smooth loading animations during data fetching
 
 ### Screen Records
-- [Weather Dashboard Demo](src\assets\demo.mp4)
+- [Weather Dashboard Demo](src/assets/demo.mp4)
