@@ -70,7 +70,7 @@ const weatherStats = computed(() => [
             </div>
             <!-- Center: Weather Icon -->
             <div class="flex flex-col items-center justify-between ">
-                <img :src="`https:${condition?.icon}`" class=" h-32 w-32 md:w-46 md:h-46 object-cover" />
+                <img :src="`https:${condition?.icon}`" class=" h-32 w-32 md:w-46 md:h-46 object-cover  transition-all duration-500 ease-in-out hover:scale-110 hover:rotate-12" />
                 <p class="text-2xl md:text-3xl font-bold text-center">{{ condition?.text }}</p>
             </div>
 

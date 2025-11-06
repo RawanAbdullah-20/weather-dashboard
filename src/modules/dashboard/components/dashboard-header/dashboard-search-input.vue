@@ -19,6 +19,6 @@ const handleInputSearch = () => {
     <!-- Input -->
     <input id="search-input" type="text" v-model="search" @keydown.enter="handleInputSearch"
       placeholder="Search for your preferred city..."
-      class="w-full py-4 ps-14 pr-6 text-text bg-card border-2 border-card rounded-full focus:outline-none placeholder:text-text shadow-md" />
+      class="w-full py-4 ps-14 pr-6 text-text bg-card border-2 border-card rounded-full focus:outline-none placeholder:text-text shadow-md transition-all duration-300 ease-in-out hover:shadow-lg " />
   </div>
 </template>

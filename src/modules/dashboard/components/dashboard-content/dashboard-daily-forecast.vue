@@ -18,15 +18,15 @@ const {forecast}=dashboardData.value ||{};
       <div
         v-for="({day,date}) in forecast?.forecastday"
         :key="`forecast-${date}`"
-        class="flex items-center justify-between  "
+        class="flex items-center justify-between p-1 rounded-lg transition-all duration-300 ease-in-out hover:bg-primary/10 hover:scale-105 cursor-pointer group"
       >
             <img 
             :src="`https:${day.condition.icon}`" 
             :alt="day.condition.text"
-            class="w-12 h-12"
+            class="w-12 h-12 group-hover:scale-110"
             />
-          <p class="text-xl text-text font-bold">{{formatNumber(day.maxtemp_c) }}°C</p>
-        <p class="text-text text-sm text-center font-bold">{{ useDateTime(date) }}</p>
+          <p class="text-xl text-text font-bold group-hover:text-primary">{{formatNumber(day.maxtemp_c) }}°C</p>
+        <p class="text-text text-sm text-center font-bold group-hover:text-primary">{{ useDateTime(date) }}</p>
     </div>
   </PrimaryCard>
 </template>
