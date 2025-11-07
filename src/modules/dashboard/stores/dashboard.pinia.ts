@@ -7,20 +7,20 @@ import { router } from '@/plugins/router';
 import { useRoute } from 'vue-router';
 import type { IWeatherData } from '../models/dashboard.interface';
 
-
 export const useDashboardStore = defineStore('dashboard', () => {
     const isLoadingDashboard: Ref<boolean> = ref(false);
     const dashboardData: Ref<IWeatherData | null> = ref(null);
     const route = useRoute();
 
-    const fetchWeatherData = async ({ location='auto:ip' }: { location?: string }) => {
+    const fetchWeatherData = async ({ location = 'auto:ip' }: { location?: string }) => {
         isLoadingDashboard.value = true;
         try {
             const { data } = await axiosInstance<IWeatherData>(DashboardApis.GetForecastWeather,
                 {
-                    params: { q: location,
-                        days:5
-                     }
+                    params: {
+                        q: location,
+                        days: 5
+                    }
                 }
             );
             isLoadingDashboard.value = false;
@@ -40,8 +40,8 @@ export const useDashboardStore = defineStore('dashboard', () => {
     };
 
     const searchWeatherData = async ({ search }: { search: string }) => {
-        if(search==searchQuery.value) return; //avoid duplicate search
-        const location = search.trim();
+        if (search == searchQuery.value) return; //avoid duplicate search
+        const location = search?.trim();
         if (!location) return;
         await fetchWeatherData({ location });
         // Update URL query without redirect

@@ -4,13 +4,14 @@ import { storeToRefs } from 'pinia';
 import { computed } from 'vue';
 
 const { toggleTheme } = (useThemeStore());
-const {  isDark } = storeToRefs(useThemeStore());
- const themeText=computed(()=>(isDark.value ? 'Dark Mode' : 'Light Mode'));
+const { isDark } = storeToRefs(useThemeStore());
+const themeText = computed(() => (isDark.value ? 'Dark Mode' : 'Light Mode'));
 </script>
+
 <template>
   <div class="flex flex-row lg:flex-col justify-center items-center gap-2 mt-4">
-    <button @click.prevent="toggleTheme()"
-      class="bg-card border-1 border-dark relative w-20 h-10 rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-none">
+    <button @click="toggleTheme"
+      class="bg-card border border-dark relative w-20 h-10 rounded-full transition-all duration-300 ease-in-out focus:outline-none ">
       <!-- Toggle Circle -->
       <span :class="[
         'absolute top-1/2 -translate-y-1/2 w-8 h-8 rounded-full transition-transform duration-300 ease-in-out bg-dark',
